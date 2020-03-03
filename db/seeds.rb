@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Cart.delete_all
 Product.delete_all
 User.delete_all
-Cart.delete_all
 
 product1 = Product.create({:name=>"Hooters Airline Shirt", :price => 10.00, :quantity => 0, :description => "hooters airline shirt", :image_url => "https://cdn.shopify.com/s/files/1/3005/3428/products/mockup-c2b1db80_1080x.jpg?v=1524877241"})
 product2 = Product.create({:name=>"Nintendo Cereal System Box", :price => 25.00, :quantity => 0, :description => "nintendo cereal systems box", :image_url => "https://i.ebayimg.com/images/g/yz8AAOSwGaVeQe5d/s-l640.jpg"})
