@@ -4,7 +4,7 @@ class UsersController < ApplicationController
         users = User.all
         
         # render json: ProductSerializer.new(products)
-        render json: users
+        render json: users, include: [:products]
     end
 
     def create

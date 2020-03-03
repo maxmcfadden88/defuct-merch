@@ -1,6 +1,6 @@
 class UserSerializer
   include FastJsonapi::ObjectSerializer
   attributes :name
-  has_one :cart
-  has_many :products, through: :cart
+  has_many :carts
+  has_many :products, through: :carts
 end

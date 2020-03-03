@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
         products = Product.all
         
         # render json: ProductSerializer.new(products)
-        render json: products
+        render json: products, include: [:users]
     end
 end
 

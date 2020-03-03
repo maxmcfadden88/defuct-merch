@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.delete_all
 User.delete_all
+Cart.delete_all
 
 product1 = Product.create({:name=>"Hooters Airline Shirt", :price => 10.00, :quantity => 0, :description => "hooters airline shirt", :image_url => "https://cdn.shopify.com/s/files/1/3005/3428/products/mockup-c2b1db80_1080x.jpg?v=1524877241"})
 product2 = Product.create({:name=>"Nintendo Cereal System Box", :price => 25.00, :quantity => 0, :description => "nintendo cereal systems box", :image_url => "https://i.ebayimg.com/images/g/yz8AAOSwGaVeQe5d/s-l640.jpg"})
@@ -16,4 +17,6 @@ product5 = Product.create({:name=>"Madoff TShirt", :price => 25.00, :quantity =>
 
 user1 = User.create({:username=>"Christine"})
 user2 = User.create({:username=>"Max"})
+
+cart1 = Cart.create({:user_id=>user1.id, :product_id=>product1.id})
 
