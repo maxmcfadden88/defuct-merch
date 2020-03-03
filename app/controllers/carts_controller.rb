@@ -1,4 +1,9 @@
 class CartsController < ApplicationController
+
+    def index
+        carts = Cart.all 
+        render json: carts, include: [:user, :product]
+    end
     def show
         cart = Cart.find(params[:id])
         options = {
